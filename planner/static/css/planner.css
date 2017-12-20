@@ -4,6 +4,11 @@
 	box-sizing: border-box;
 }
 
+a.register_button {
+	text-decoration: none;
+	color: black;
+}
+
 .background-img {
   opacity: 0.4;
 	height: 1080px;
@@ -49,12 +54,14 @@
 .top-nav {
 	box-shadow: 0px 10px 30px rgba(0,0,0,0.2);
 	width: 100%;
+	height: 45px;
 	float: left;
 	background-color: #f2f2f2;
 	border-bottom: 1px solid #ccc;
   z-index: 3;
 	position: fixed;
 	top: 0px;
+	padding: 10px;
 }
 
 .top-nav ul {
@@ -72,7 +79,8 @@
 	text-decoration: none;
 	font-weight: bold;
 	color: #069;
-	border-right: 1px solid #ccc; }
+	border-right: 1px solid #ccc;
+ 	border-left: 1px solid #ccc;  }
 
 .top-nav li:first-child a {
 	border-left: 1px solid #ccc; }
@@ -84,12 +92,14 @@
 .topnav {
 	box-shadow: 0px 10px 30px rgba(0,0,0,0.2);
 	width: 100%;
+	height: 45px;
 	float: left;
-	background-color: blue;
+	background-color: #f2f2f2;
   border-bottom: 1px solid #ccc;
   z-index: 3;
- 	position: fixed;
-  top: 0px; }
+ 	position: absolute;
+  top: 0px;
+	padding: 10px; }
 
 .topnav ul {
 	list-style: none
@@ -106,7 +116,8 @@
 	text-decoration: none;
 	font-weight: bold;
 	color: #069;
-	border-right: 1px solid #ccc; }
+	border-right: 1px solid #ccc;
+ 	border-left: 1px solid #ccc; }
 
 .topnav li:first-child a {
 	border-left: 1px solid #ccc; }
