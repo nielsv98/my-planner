@@ -2,13 +2,14 @@ from django.shortcuts import redirect, render, get_object_or_404
 from .models import Event
 from .forms import EventForm, UserLoginForm, UserRegisterForm
 from django.contrib.auth import authenticate, get_user_model, login, logout
+from .models import Event
 
 # Create your views here.
 def login_page(request):
     return render(request, 'planner/login_page.html')
 
 def event_overview(request):
-    events = Event.objects.all()
+    events = Event.objects.filter(author = request.user)
     return render(request, 'planner/event_overview.html', {'events': events})
 
 def event_new(request):

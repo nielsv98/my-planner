@@ -5,7 +5,7 @@ from django.contrib.auth import authenticate, get_user_model, login, logout
 User = get_user_model()
 
 class EventForm(forms.ModelForm):
-
+    
     class Meta:
         model = Event
         fields = ('title', 'description', 'day', 'starting_time', 'end_time',)
