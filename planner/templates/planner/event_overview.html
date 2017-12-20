@@ -1,0 +1,181 @@
+{% extends 'planner/base.html' %}
+
+			 {% block timeline %}
+			 <ul>
+				 <li><span>07:00</span></li>
+				 <li><span>07:30</span></li>
+				 <li><span>08:00</span></li>
+				 <li><span>08:30</span></li>
+				 <li><span>09:00</span></li>
+				 <li><span>09:30</span></li>
+				 <li><span>10:00</span></li>
+				 <li><span>10:30</span></li>
+				 <li><span>11:00</span></li>
+				 <li><span>11:30</span></li>
+				 <li><span>12:00</span></li>
+				 <li><span>12:30</span></li>
+				 <li><span>13:00</span></li>
+				 <li><span>13:30</span></li>
+				 <li><span>14:00</span></li>
+				 <li><span>14:30</span></li>
+				 <li><span>15:00</span></li>
+				 <li><span>15:30</span></li>
+				 <li><span>16:00</span></li>
+				 <li><span>16:30</span></li>
+				 <li><span>17:00</span></li>
+				 <li><span>17:30</span></li>
+				 <li><span>18:00</span></li>
+				 <li><span>18:30</span></li>
+				 <li><span>19:00</span></li>
+				 <li><span>19:30</span></li>
+				 <li><span>20:00</span></li>
+				 <li><span>20:30</span></li>
+				 <li><span>21:00</span></li>
+				 <li><span>21:30</span></li>
+				 <li><span>22:00</span></li>
+				 <li><span>22:30</span></li>
+				 <li><span>23:00</span></li>
+				 <li><span>23:30</span></li>
+				 <li><span>00:00</span></li>
+				 <li><span>00:30</span></li>
+				 <li><span>01:00</span></li>
+				 <li><span>01:30</span></li>
+				 <li><span>02:00</span></li>
+				 <li><span>02:30</span></li>
+				 <li><span>03:00</span></li>
+				 <li><span>03:30</span></li>
+				 <li><span>04:00</span></li>
+				 <li><span>04:30</span></li>
+				 <li><span>05:00</span></li>
+				 <li><span>05:30</span></li>
+				 <li><span>06:00</span></li>
+				 <li><span>06:30</span></li>
+				 <li><span>07:00</span></li>
+			 </ul>
+			 {% endblock %}
+
+       {% block monday %}
+						<li class="events-group">
+						 <div class="top-info"><span>Monday</span></div>
+
+								 <ul>
+				{% for event in events %}
+				 	{% if event.day == "Monday" %}
+					<li class="single-event" data-start="{{ event.starting_time }}" data-end="{{ event.end_time }}" data-content="{{ event.title }}" data-event="event-1">
+						<a href="#0">
+							<em class="event-name">{{ event.title }}</em>
+						</a>
+					</li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+ </li>
+			 {% endblock %}
+
+			 {% block tuesday %}
+						<li class="events-group">
+						 <div class="top-info"><span>Tuesday</span></div>
+
+								 <ul>
+				{% for event in events %}
+				 	{% if event.day == "Tuesday" %}
+					<li class="single-event" data-start="{{ event.starting_time }}" data-end="{{ event.end_time }}" data-content="{{ event.title }}" data-event="event-2">
+						<a href="#0">
+							<em class="event-name">{{ event.title }}</em>
+						</a>
+					</li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+ </li>
+			 {% endblock %}
+
+			 {% block wednesday %}
+						<li class="events-group">
+						 <div class="top-info"><span>Wednesday</span></div>
+
+								 <ul>
+				{% for event in events %}
+				 	{% if event.day == "Wednesday" %}
+					<li class="single-event" data-start="{{ event.starting_time }}" data-end="{{ event.end_time }}" data-content="{{ event.title }}" data-event="event-3">
+						<a href="#0">
+							<em class="event-name">{{ event.title }}</em>
+						</a>
+					</li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+ </li>
+			 {% endblock %}
+
+			 {% block thursday %}
+						<li class="events-group">
+						 <div class="top-info"><span>Thursday</span></div>
+
+								 <ul>
+				{% for event in events %}
+				 	{% if event.day == "Thursday" %}
+					<li class="single-event" data-start="{{ event.starting_time }}" data-end="{{ event.end_time }}" data-content="{{ event.title }}" data-event="event-4">
+						<a href="#0">
+							<em class="event-name">{{ event.title }}</em>
+						</a>
+					</li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+ </li>
+			 {% endblock %}
+
+			 {% block friday %}
+						<li class="events-group">
+						 <div class="top-info"><span>Friday</span></div>
+
+								 <ul>
+				{% for event in events %}
+				 	{% if event.day == "Friday" %}
+					<li class="single-event" data-start="{{ event.starting_time }}" data-end="{{ event.end_time }}" data-content="{{ event.title }}" data-event="event-1">
+						<a href="#0">
+							<em class="event-name">{{ event.title }}</em>
+						</a>
+					</li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+ </li>
+			 {% endblock %}
+
+			 {% block saturday %}
+						<li class="events-group">
+						 <div class="top-info"><span>Saturday</span></div>
+
+								 <ul>
+				{% for event in events %}
+				 	{% if event.day == "Saturday" %}
+					<li class="single-event" data-start="{{ event.starting_time }}" data-end="{{ event.end_time }}" data-content="{{ event.title }}" data-event="event-2">
+						<a href="#0">
+							<em class="event-name">{{ event.title }}</em>
+						</a>
+					</li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+ </li>
+			 {% endblock %}
+
+			 {% block sunday %}
+						<li class="events-group">
+						 <div class="top-info"><span>Sunday</span></div>
+
+								 <ul>
+				{% for event in events %}
+				 	{% if event.day == "Sunday" %}
+					<li class="single-event" data-start="{{ event.starting_time }}" data-end="{{ event.end_time }}" data-content="{{ event.title }}" data-event="event-3">
+						<a href="#0">
+							<em class="event-name">{{ event.title }}</em>
+						</a>
+					</li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+ </li>
+			 {% endblock %}

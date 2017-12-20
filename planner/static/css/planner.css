@@ -1,0 +1,200 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+.background-img {
+  opacity: 0.4;
+	height: 1080px;
+	width: 1920px;
+	z-index: 1;
+}
+
+.home {
+	position: fixed;
+  top: 35%;
+  left: 35%;
+	border: 4px solid black;
+	border-radius: 15px;
+	padding: 20px;
+	box-shadow: 10px 10px 30px rgba(0,0,0,0.3);
+	background-color: #CF6766;
+	z-index: 2;
+}
+
+.buttons {
+	border: 2px solid white;
+  border-radius: 10px;
+  padding: 15px 32px;
+	margin-bottom: 10px;
+	margin-left: 35%;
+  text-align: center;
+	color: black;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 19px;
+}
+
+.buttons:hover {
+	background-color: white;
+}
+
+.home-text {
+	font-size: 19px;
+	font-family: "Georgia", Georgia, serif;
+	margin: 20px;
+}
+
+.top-nav {
+	box-shadow: 0px 10px 30px rgba(0,0,0,0.2);
+	width: 100%;
+	float: left;
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #ccc;
+  z-index: 3;
+	position: fixed;
+	top: 0px;
+}
+
+.top-nav ul {
+	list-style: none
+	width: 800px;
+	margin: 0 auto;
+	padding: 0; }
+
+.top-nav li {
+	float: left; }
+
+.top-nav li a {
+	display: inline;
+	padding: 15px 25px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #069;
+	border-right: 1px solid #ccc; }
+
+.top-nav li:first-child a {
+	border-left: 1px solid #ccc; }
+
+.top-nav li a:hover {
+	color: #c00;
+	background-color: #fff; }
+
+.topnav {
+	box-shadow: 0px 10px 30px rgba(0,0,0,0.2);
+	width: 100%;
+	float: left;
+	background-color: blue;
+  border-bottom: 1px solid #ccc;
+  z-index: 3;
+ 	position: fixed;
+  top: 0px; }
+
+.topnav ul {
+	list-style: none
+	width: 800px;
+	margin: 0 auto;
+	padding: 0; }
+
+.topnav li {
+	float: left; }
+
+.topnav li a {
+	display: inline;
+	padding: 15px 25px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #069;
+	border-right: 1px solid #ccc; }
+
+.topnav li:first-child a {
+	border-left: 1px solid #ccc; }
+
+.topnav li a:hover {
+	color: #c00;
+	background-color: #fff; }
+
+	* {box-sizing: border-box;}
+	ul {list-style-type: none;}
+	body {font-family: Verdana, sans-serif;}
+
+	.month {
+	    padding-top: 75px;
+			padding-bottom: 25px;
+	    width: 100%;
+	    background: red;
+	    text-align: center;
+	}
+
+	.month ul {
+	    margin: 0;
+	    padding: 10px;
+	}
+
+	.month ul li {
+	    color: white;
+	    font-size: 20px;
+	    text-transform: uppercase;
+	    letter-spacing: 3px;
+	}
+
+	.month .prev {
+	    float: left;
+	    padding-top: 10px;
+	}
+
+	.month .next {
+	    float: right;
+	    padding-top: 10px;
+	}
+
+	.weekdays {
+	    margin: 0;
+	    padding: 10px 0;
+	    background-color: #ddd;
+	}
+
+	.weekdays li {
+	    display: inline-block;
+	    width: 13.6%;
+	    color: #666;
+	    text-align: center;
+	}
+
+	.days {
+	    padding: 10px 0;
+	    background: #eee;
+	    margin: 0;
+	}
+
+	.days li {
+	    list-style-type: none;
+	    display: inline-block;
+	    width: 13.6%;
+	    text-align: center;
+	    margin-bottom: 5px;
+	    font-size:12px;
+	    color: #777;
+	}
+
+	.days li .active {
+	    padding: 5px;
+	    background: #1abc9c;
+	    color: white !important
+	}
+
+
+	/* Add media queries for smaller screens */
+	@media screen and (max-width:720px) {
+	    .weekdays li, .days li {width: 13.1%;}
+	}
+
+	@media screen and (max-width: 420px) {
+	    .weekdays li, .days li {width: 12.5%;}
+	    .days li .active {padding: 2px;}
+	}
+
+	@media screen and (max-width: 290px) {
+	    .weekdays li, .days li {width: 12.2%;}
+	}

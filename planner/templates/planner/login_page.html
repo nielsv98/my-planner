@@ -1,0 +1,27 @@
+{% load staticfiles %}
+<!DOCTYPE>
+<html>
+  <head>
+    <title> Home </title>
+   <link href="{% static 'css/planner.css' %}" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="topnav">
+	     <ul>
+		     <li><a href="">Home</a></li>
+	     </ul>
+    </div>
+    <div class="background-img">
+      <img src="{% static 'img/Background.jpg' %}" alt="Background">
+    </div>
+    <div class="home">
+      <h1>Welcome to Planner</h1>
+      <br/>
+      <p class="home-text">We offer you the oppurtunity to get your <br/>daily life planned out perfectly.</p>
+      <p class="home-text"><br/>So what are you waiting for <strong>get started!</strong></p>
+      <br/>
+      {% block login %}
+      {% endblock %}
+    </div>
+  </body>
+</html>

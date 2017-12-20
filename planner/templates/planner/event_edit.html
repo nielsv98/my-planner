@@ -1,0 +1,12 @@
+{% extends 'planner/base.html' %}
+
+{% block content %}
+<div class="add-form">
+    <h1>New event</h1>
+    <br/>
+    <form method="POST" class="event-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+</div>
+{% endblock %}

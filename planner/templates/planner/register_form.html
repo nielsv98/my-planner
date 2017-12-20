@@ -1,0 +1,12 @@
+{% extends 'planner/login_page.html' %}
+
+{% block login %}
+<div class="login-form">
+    <h4>Register</h4>
+    <br/>
+    <form method="POST" class="register-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Register</button>
+    </form>
+</div>
+{% endblock %}

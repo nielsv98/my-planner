@@ -6,10 +6,9 @@ class Event(models.Model):
     author = models.ForeignKey('auth.User')
     title = models.CharField(max_length=200)
     description = models.TextField()
-    starting_time = models.DateTimeField(
-            blank=True, null=True)
-    end_time = models.DateTimeField(
-            blank=True, null=True)
+    day = models.CharField(default="Monday", max_length=9)
+    starting_time = models.CharField(max_length=5)
+    end_time = models.CharField(max_length=5)
 
     def publish(self):
         self.starting_time = timezone.now()
