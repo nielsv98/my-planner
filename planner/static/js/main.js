@@ -113,6 +113,8 @@ jQuery(document).ready(function($){
 		//update event name and time
 		this.modalHeader.find('.event-name').text(event.find('.event-name').text());
 		this.modalHeader.find('.event-date').text(event.find('.event-date').text());
+		this.modalHeader.find('.event-description').text(event.find('.event-description').text());
+		this.modalBody.find('.event-description').text(event.find('.event-description').text());
 		this.modal.attr('data-event', event.parent().attr('data-event'));
 
 		//update event content
