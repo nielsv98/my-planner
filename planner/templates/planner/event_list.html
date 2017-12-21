@@ -1,0 +1,15 @@
+{% extends 'planner/base.html' %}
+
+{% block content %}
+<div class="event-list">
+    <ul>
+    {% for event in events %}
+    <div class="list-block">
+      <li class="list-text">- {{ event.title }}
+        <a class="btn btn-default" href="{% url 'event_detail' pk=event.pk %}"><span class="glyphicon glyphicon-folder-open"></span></a>
+      </li>
+    </div>
+    {% endfor %}
+    </ul>
+    <a class="btn btn-default" href="/events/new"><span class="glyphicon glyphicon-plus"></span></a>
+{% endblock %}

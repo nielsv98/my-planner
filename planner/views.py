@@ -12,6 +12,29 @@ def event_overview(request):
     events = Event.objects.filter(author = request.user)
     return render(request, 'planner/event_overview.html', {'events': events})
 
+def event_detail(request, pk):
+    detail = get_object_or_404(Event, pk=pk)
+    return render(request, 'planner/event_detail.html', {'detail': detail})
+
+def event_delete(request, pk):
+    instance = Event.objects.get(id=pk)
+    instance.delete()
+    return redirect('event_list')
+    return render(request, 'planner/event_list.html', {'instance': instance})
+
+def event_edit(request, pk):
+    edit = get_object_or_404(Event, pk=pk)
+    if request.method == "POST":
+        form = EventForm(request.POST, instance=edit)
+        if form.is_valid():
+            event = form.save(commit=False)
+            event.author = request.user
+            event.save()
+            return redirect('event_detail', pk=edit.pk)
+    else:
+        form = EventForm(instance=edit)
+    return render(request, 'planner/event_edit.html', {'form': form})
+
 def event_new(request):
     if request.method == "POST":
         form = EventForm(request.POST)
@@ -19,23 +42,14 @@ def event_new(request):
             event = form.save(commit=False)
             event.author = request.user
             event.save()
-            return redirect('event_overview')
+            return redirect('event_detail', pk=event.pk)
     else:
         form = EventForm()
     return render(request, 'planner/event_edit.html', {'form': form})
 
-def event_edit(request):
-    event = get_object_or_404(Event)
-    if request.method == "POST":
-        form = EventForm(request.POST, instance=event)
-        if form.is_valid():
-            event = form.save(commit=False)
-            event.author = request.user
-            event.save()
-            return redirect('event_overview')
-    else:
-        form = EventForm()
-    return render(request, 'planner/event_edit.html', {'form': form})
+def event_list(request):
+    events = Event.objects.filter(author = request.user)
+    return render(request, 'planner/event_list.html', {'events': events})
 
 def login_view(request):
     print(request.user.is_authenticated())

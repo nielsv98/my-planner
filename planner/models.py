@@ -5,7 +5,7 @@ class Event(models.Model):
     author = models.ForeignKey('auth.User')
     title = models.CharField(max_length=200)
     description = models.TextField()
-    day = models.CharField(default="Monday", max_length=9)
+    day = models.CharField(default="", max_length=9)
     starting_time = models.CharField(max_length=5)
     end_time = models.CharField(max_length=5)
 

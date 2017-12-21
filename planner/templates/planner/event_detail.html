@@ -1,0 +1,19 @@
+{% extends 'planner/base.html' %}
+
+{% block content %}
+    <div class="event">
+
+            <div class="date">
+                <b>Day:</b> <br/><br/> <p>{{ detail.day }}</p>
+                <br/><br/>
+                <b>Duration:</b> <br/><br/> <p>{{ detail.starting_time }} - {{ detail.end_time }}</p>
+            </div>
+        <br/><br/>
+        <b>Title:</b> <br/><br/> <h1>{{ detail.title }}</h1>
+        <br/><br/>
+        <b>Description:</b> <br/><br/> <p>{{ detail.description|linebreaksbr }}</p>
+        <br/><br/>
+        <a class="btn btn-default" href="{% url 'event_edit' pk=detail.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        <a class="btn btn-default" href="{% url 'event_delete' pk=detail.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+    </div>
+{% endblock %}

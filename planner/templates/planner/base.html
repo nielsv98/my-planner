@@ -14,13 +14,28 @@
 	<title>Schedule Template | CodyHouse</title>
 
 	<link rel="stylesheet" href="{% static 'css/style.css' %}"> <!-- Resource style -->
+
+	<style>
+		b {
+			font-style: italic;
+		}
+		.list-block {
+			display: inline;
+			padding: 10px;
+			font-size: 18px;
+		}
+
+		.list-text {
+			color: black;
+		}
+	</style>
 </head>
 <body>
 <nav>
 <div class="topnav">
 	 <ul>
 		 <li><a href="/events">Planner</a></li>
-		 <li><a href="{% url 'event_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+		 <li><a href="{% url 'event_list' %}">Manage</a></li>
 		 <li><a href="/logout">Logout</a></li>
 	 </ul>
 </div>
@@ -79,7 +94,6 @@
 			</div>
 			<div class="body-bg"></div>
 		</div>
-		<a class="btn btn-default" href="{% url 'event_edit' %}"><span class="glyphicon glyphicon-pencil"></span></a>
 		<a href="#0" class="close">Close</a>
 	</div>
 
