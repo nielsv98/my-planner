@@ -9,6 +9,10 @@ a.register_button {
 	color: black;
 }
 
+.hidden {
+	visibility: hidden;
+}
+
 .background-img {
   opacity: 0.4;
 	height: 1080px;
