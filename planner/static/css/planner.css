@@ -15,8 +15,9 @@ a.register_button {
 }
 
 b {
-	font-style: italic;
+	font-weight: bold;
 }
+
 .list-block {
 	display: inline;
 	padding: 10px;
@@ -36,10 +37,6 @@ b {
 	height: 1080px;
 	width: 1920px;
 	z-index: 1;
-}
-
-img {
-
 }
 
 .home {
@@ -101,7 +98,7 @@ img {
 
 .top-nav li a {
 	display: inline;
-	padding: 15px 25px;
+	padding: 15px 15px;
 	text-decoration: none;
 	font-weight: bold;
 	color: #069;
