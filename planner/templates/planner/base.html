@@ -15,12 +15,37 @@
 
 	<link rel="stylesheet" href="{% static 'css/style.css' %}"> <!-- Resource style -->
 
+	<style>
+        .top-nav li a {
+            padding: 15px 20px;
+        }
+
+				.top-nav li a span {
+						padding: 15px 20px;
+				}
+
+        b {
+        	font-weight: bold;
+        }
+
+        .list-block {
+	        display: inline;
+	        padding: 10px;
+         	font-size: 18px;
+        }
+
+        .list-text {
+	        color: black;
+        }
+
+    </style>
+
 </head>
-<body>
+<body style="background-color: #d0d0e1;">
 <nav>
 <div class="topnav">
 	 <ul>
-		 <li><a class="btn btn-default" href="{% url 'event_detail' pk=event.pk %}"><span class="glyphicon glyphicon-home"></span></a></li>
+		 <li><a href="/lists"><span class="glyphicon glyphicon-home"></span></a></li>
 		 <li><a href="{% url 'event_list' %}">Manage</a></li>
 		 <li><a href="/logout">Logout</a></li>
 		 <li><a href="/lists">API</a></li>

@@ -11,7 +11,7 @@ from .models import Event
 # Create your views here.
 class ApiList(APIView):
     def get(self, request):
-        events = Event.objects.filter(author=request.user)
+        events = Event.objects.all()
         serializer = EventSerializer(events, many=True)
         return Response(serializer.data)
 
