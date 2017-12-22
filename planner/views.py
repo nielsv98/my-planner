@@ -1,10 +1,47 @@
 from django.shortcuts import redirect, render, get_object_or_404
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+from .serializer import EventSerializer
 from .models import Event
 from .forms import EventForm, UserLoginForm, UserRegisterForm
 from django.contrib.auth import authenticate, get_user_model, login, logout
 from .models import Event
 
 # Create your views here.
+class ApiList(APIView):
+    def get(self, request):
+        events = Event.objects.filter(author=request.user)
+        serializer = EventSerializer(events, many=True)
+        return Response(serializer.data)
+
+    def post(self, request):
+        serializer = EventSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class ApiDetail(APIView):
+
+    def get(self, request, pk, format=None):
+        event = get_object_or_404(Event, pk=pk)
+        serializer = EventSerializer(event)
+        return Response(serializer.data)
+
+    def put(self, request, pk, format=None):
+        event = get_object_or_404(Event, pk=pk)
+        serializer = EventSerializer(event, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def delete(self, request, pk, format=None):
+        event = get_object_or_404(Event, pk=pk)
+        event.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
 def login_page(request):
     return render(request, 'planner/login_page.html')
 

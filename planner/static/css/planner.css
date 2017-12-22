@@ -9,6 +9,24 @@ a.register_button {
 	color: black;
 }
 
+.register-button {
+	text-decoration: none;
+	color: black;
+}
+
+b {
+	font-style: italic;
+}
+.list-block {
+	display: inline;
+	padding: 10px;
+	font-size: 18px;
+}
+
+.list-text {
+	color: black;
+}
+
 .hidden {
 	visibility: hidden;
 }
@@ -18,6 +36,10 @@ a.register_button {
 	height: 1080px;
 	width: 1920px;
 	z-index: 1;
+}
+
+img {
+
 }
 
 .home {
