@@ -28,7 +28,7 @@ a.register_button {
 	border-radius: 15px;
 	padding: 20px;
 	box-shadow: 10px 10px 30px rgba(0,0,0,0.3);
-	background-color: #CF6766;
+	background-color: rgba(0,0,0,0);
 	z-index: 2;
 }
 
